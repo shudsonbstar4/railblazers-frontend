@@ -18,32 +18,116 @@
         <div class="navbar-header">
           <a href="#" class="navbar-brand"><img src="../HTML/assets/img/logo.png" alt="Railblazers" height="45px" /></a>
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="../HTML/index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Events</a></li>
           </ul>
         </div>
         <div class="nav navbar-nav navbar-right">
-          <button class="btn btn-default">Login</button>
-          <button class="btn btn-default">Sign Up</button>
+          <img src="http://placehold.it/35x35" alt="avatar" class="img-circle" />
+          <button class="btn btn-default">Sign Out</button>
         </div>
       </div>
     </nav>
     
+    <div ng-view></div>
+
     <div class="row">
+      <!-- Filler space for accordion-->
       <div class="col-md-2">
         Hello
       </div>
+
+      <!-- Main div -->
       <div class="col-md-10">
         <h1>Account Dashboard</h1>
         <ul class="breadcrumb">
           <li><a href="#">Account Dashboard</a></li>
           <li><a href="#">Settings</a></li>
         </ul>
+        <div class="clear-space"></div>
+
+        <div class="row">
+          <div class="col-md-10">
+            <!-- First form -->
+            <form class="form-horizontal form-fieldset">
+              <fieldset>
+                <legend>Account Information</legend>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-2 control-label">Full Name:</label>
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Enter name...">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-2 control-label">Email:</label>
+                  <div class="col-md-5">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Enter email...">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-2 control-label">Password:</label>
+                  <div class="col-md-5">
+                    <input type="password" class="form-control" id="inputEmail3" placeholder="*******">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-2"></div>
+                  <p class="help-block col-md-5">
+                    <a href="" class="text-right">Change password</a>
+                  </p>
+                </div>
+                <div class="pull-right">
+                  <button class="btn btn-success green">Save</button>
+                </div>
+              </fieldset>
+            </form>
+            <div class="clear-space"></div>
+            <!--second form-->
+            <!-- First form -->
+            <form class="form-horizontal form-fieldset">
+              <fieldset>
+                <legend>Profile Information</legend>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-2 control-label">Profile Picture:</label>
+                  <div class="col-md-5">
+                    <input type="file" class="form-control" id="inputEmail3">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-2 control-label">Bio:</label>
+                  <div class="col-md-5">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-md-2 control-label">Social Networks:</label>
+                  <div class="col-md-5">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" class="checkbox" id="inlineCheckbox3" value="option3"> Facebook
+                        <!--<input type="text" class="form-control" placeholder="www.facebook.com" />-->
+                      </label>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" class="checkbox" id="inlineCheckbox3" value="option3"> Twitter
+                        <!--<input type="text" class="form-control" placeholder="www.facebook.com" />-->
+                      </label>
+                    </div>
+                  </div>
+                </div>
+               
+                <div class="pull-right">
+                  <button class="btn btn-success green">Save</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="clear-space"></div>
+
 
     <footer class="footer footer-inverse">
       <div class="footer-inner text-center">

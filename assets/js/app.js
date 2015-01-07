@@ -1,9 +1,7 @@
-angular.module('RailblazersApp', ['ui.bootstrap'])
+var app = angular.module('myApp', [])
 
-.config(function(){
 
-})
 
-.controller("MainController", ['$scope', function($scope){
+app.controller("MainController", ['$scope', function($scope){
 
 }])
