@@ -11,40 +11,43 @@
   </head>
 
   <body>
-   <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-           <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt="Railblazers" height="45px" /></a>
-          <ul class="nav navbar-nav">
+          <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt="Railblazers" height="45px" /></a>
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+        <div class="nav navbar-nav navbar-right">
+          <button class="btn btn-default">Login</button>
+          <button class="btn btn-default">Sign Up</button>
+        </div>
       </div>
     </nav>
-    
    
     
     <div class="banner text-center">
-      <h3>Browse popular events in your area</h3>
+      <h3>Frequently Asked Questions</h3>
     </div>
     
     <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-4" ng-repeat="event in events">
-        <div class="pin-background">
-          <h3>CLT Group</h3>
-          <img src="http://placehold.it/250x250" alt="filler" />
-          <h4 class="remove-margin">Event 1</h4>
-          <p>Monday, December 30, 2014<br />
-            7:30pm - 9:30pm
-          </p>
-          <p><strong>29 members going</strong></p>
-          <button class="btn btn-danger btn-block red">RSVP</button>
-        </div>
+      <div class="col-md-12 col-sm-3 col-xs-4">
+       <p><li>Q. The waves of time wash us all clean. This stuff, or whoever sent it, is cleverer than we are. </li>
+       <li>A. Unfortunate, isn't it? Oh I'm so sorry, Jamie. An old friend of mine. Well, enemy. The stuff of nightmares reduced to an exhibit. </li></p>
+       <p><li>Q. That's a relief. I hate babysitters. Blimey, trying to make an Ood laugh.</li>
+       <li>A. It may be irrational of me, but human beings are my favorite species.</li></p> No idea. Just do what I do: hold tight and pretend it's a plan. A little gratitude wouldn't irretrievably damage my ego. Anybody remotely interesting is mad in some way. 
+       <p><li>Q. Be a pal and tell me, Am I a good man?</li> 
+       <li>A. I want to see the universe, not to rule it.</li></p>
       </div>
     </div>
+
+
+
      <footer class="footer footer-inverse">
       <div class="footer-inner text-center">
         <ul>
