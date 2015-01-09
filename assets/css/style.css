@@ -1,11 +1,11 @@
 /* Styles go here */
 
 body {
-  font-family:'Open Sans', Arial, sans-serif;
+  font-family:'Open Sans', Arial, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family:inherit;
+  font-family:'Open Sans', Arial, sans-serif !important;
   font-weight:normal;
   margin:20px 0;
 }
@@ -118,7 +118,19 @@ h1{
   width:100%;
 }
 
-.sidebar {
+.cheat-background {
+  background-color:#222;
+}
+
+.content-background{
+  background-color:#fff;
+}
+
+.sidebar{
+  background-color:#222;
+}
+
+/*.sidebar {
   border:1px solid #d1d1d1;
   background-color:#f1f1f2;
   height:100%;
@@ -132,7 +144,7 @@ h1{
   margin:5px -15px 0px;
   text-decoration:none;
 
-}
+}*/
 
 .navbar .dropdown{
   display:inline-block;
