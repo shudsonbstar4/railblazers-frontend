@@ -44,23 +44,45 @@
     
     <div ng-view></div>
 
-    <div class="row">
+    <div class="row cheat-background">
       <!-- Filler space for accordion-->
-      <div class="col-md-2 sidebar">
+      <div class="col-md-2">
         <!--<button class="btn btn-default btn-lg btn-block">Settings</button>
         <button class="btn btn-default btn-lg btn-block">Subscription</button>
         <button class="btn btn-default btn-lg btn-block">Events</button>
         <button class="btn btn-default btn-lg btn-block">Groups</button>-->
-        <div class="link-group text-center">
+        <!--<div class="link-group text-center">
           <a href="../HTML/dashboard-settings.html" class="link">Settings</a>
           <a href="#" class="link">Subscription</a>
           <a href="#" class="link">My Events</a>
           <a href="#" class="link">My Groups</a>
-        </div>
+        </div>-->
+        <nav class="navbar navbar-inverse sidebar" id="custom-sidebar" role="navigation">
+          <div >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+              <ul class="nav navbar-nav"> <!--navbar-nav">-->
+                <li class="active"><a name="settings" href="../HTML/dashboard-settings.html">Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+                <li ><a name="subscription" href="../HTML/dashboard-subscription.html">Subscription<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-book"></span></a></li>
+                <li ><a name="myEvents" href="#myEvents">My Events<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
+                <li ><a name="myGroups" href="#myGroups">My Groups<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
 
       <!-- Main div -->
-      <div class="col-md-10">
+      <div class="col-md-10 content-background">
         <h1>Account Dashboard</h1>
         <ul class="breadcrumb">
           <li><a href="../HTML/dashboard-settings.html">Account Dashboard</a></li>
@@ -197,11 +219,14 @@
                 </div>
               </fieldset>
             </form>
+            <div class="clear-space"></div>
           </div>
+
         </div>
       </div>
+
     </div>
-    <div class="clear-space"></div>
+    
 
 
     <footer class="footer footer-inverse">

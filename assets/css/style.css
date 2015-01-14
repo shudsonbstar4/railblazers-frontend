@@ -146,6 +146,23 @@ h1{
 
 }*/
 
+.green-icon{
+  color:green;
+}
+
+.red-icon{
+  color:red;
+}
+
+.plan-feature{
+  font-weight: bold;
+}
+
+.navbar{
+  border-radius:0;
+  border:0;
+}
+
 .navbar .dropdown{
   display:inline-block;
   margin-right:10px;
