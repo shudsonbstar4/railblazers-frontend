@@ -12,7 +12,7 @@
     <script src="assets/js/app.js" type="javascript"></script>
   </head>
 
-  <body>
+  <body ng-app="myApp" ng-controller="ChangeUserPlanController">
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -41,10 +41,8 @@
         </div>
       </div>
     </nav>
-    
-    <div ng-view></div>
 
-    <div class="row cheat-background">
+    <div class="row cheat-background" ui-view>
       <!-- Filler space for accordion-->
       <div class="col-md-2">
         <!--<button class="btn btn-default btn-lg btn-block">Settings</button>
@@ -87,10 +85,157 @@
         <ul class="breadcrumb">
           <li><a href="../HTML/dashboard-settings.html">Account Dashboard</a></li>
           <li><a href="../HTML/dashboard-settings.html">Subscription</a></li>
+          <li><a href="../HTML/dashboard-settings.html">Change Plan</a></li>
         </ul>
 
         <div class="row">
           <div class="col-md-10">
+
+            <!-- BEGIN PAGE CONTENT-->
+      <div class="row margin-bottom-20">
+        <div class="col-md-12">
+                    <div class="portlet" id="form_wizard_1">
+                      <div class="portlet-body form">
+                        <div class="form-horizontal"><!--was form-->
+                          <div class="form-wizard">
+                            <div class="form-body">
+                              <ul class="nav nav-pills nav-justified steps">
+                                <!--<li ng-class="{'active': activeTab===1, 'done': step1 ===true}">-->
+                                <li ui-sref-active="active" ng-class="{'done': step1 ===true}">
+                                  <a ui-sref="client-addnew.step-1" data-toggle="tab" class="step" >
+                                  <span class="number">
+                                    1
+                                  </span>
+                                  <span class="desc">
+                                    <i class="fa fa-check"></i> Billing Information
+                                  </span>
+                                  </a>
+                                </li>
+                                <li ui-sref-active="active" ng-class="{'done': step2 ===true}">
+                                  <a href ng-click="checkStep1(client, AddClientStep1)" class="step">
+                                  <span class="number">
+                                    2
+                                  </span>
+                                  <span class="desc">
+                                    <i class="fa fa-check"></i> Review
+                                  </span>
+                                  </a>
+                                </li>
+                                <li ui-sref-active="active" ng-class="{'done': step3 ===true}">
+                                  <a ui-sref="client-addnew.step-3" data-toggle="tab" class="step active">
+                                  <span class="number">
+                                    3
+                                  </span>
+                                  <span class="desc">
+                                    <i class="fa fa-check"></i> Confirmation
+                                  </span>
+                                  </a>
+                                </li>
+                                
+                              </ul>
+                              <div id="bar" class="progress progress-striped" role="progressbar">
+                                <div class="progress-bar progress-bar-success" ng-style="{'width': percentBar}">
+                                </div>
+                              </div>
+                              <div class="tab-content">
+                                  <form role="form" name="AddClientStep1" novalidate>
+                                    <fieldset>
+                                    <legend>Billing Information</legend>
+                                    <div class="form-group">
+                                      <label class="control-label col-md-3">
+                                          <span class="required">*</span>Full Name:
+                                      </label>
+                                      <div class="col-md-5">
+                                        <input type="text" class="form-control" name="clientFirstName" ng-model="client.firstName" />
+                                        
+                                      </div>
+                                    </div>
+                                        <!--<div ng-show="AddClientStep1.clientFirstName.$invalid">
+                                          <br />
+                                           <div class="alert alert-danger">
+                                            <span>Client Details Invalid:</span>
+                                            <span ng-show="AddClientStep1.clientFirstName.$error.required">This field is required. Please enter a value.</span>
+                                          </div>
+                                     </div>-->
+                                    <div class="form-group">
+                                      <label class="control-label col-md-3">
+                                        <span translate="ClientAdd.lastName">Last Name:</span>
+                                      </label>
+                                      <div class="col-md-5">
+                                        <input type="text" class="form-control" name="last-name" ng-model="client.lastName"/>
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label col-md-3"><!--<span class="required">*</span>-->
+                                        <span translate="ClientAdd.email">Email Address:</span>
+                                      </label>
+                                      <div class="col-md-5">
+                                        <input type="text" class="form-control" name="email" ng-model="client.emailAddress"/>
+                                        <span class="help-block">
+                                          <span translate="ClientAdd.emailPrompt">Enter the email where appointment notices should be sent to</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label class="control-label col-md-3"><!--<span class="required">*</span>-->
+                                        <span translate="ClientAdd.password">Password:</span>
+                                      </label>
+                                      <div class="col-md-5">
+                                        <input type="password" class="form-control" name="password" ng-model="client.password" />
+                                        <span class="help-block">
+                                          <span translate="ClientAdd.passwordPrompt">Providing the client with a password lets them login to the scheduler</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <!--<div class="form-group">
+                                      <label class="control-label col-md-3"><span class="required">*</span>Confirm Password:
+                                      
+                                      </label>
+                                      <div class="col-md-5">
+                                        <input type="password" class="form-control" name="rpassword"/>
+                                      </div>
+                                    </div>-->
+
+                                    <div class="form-actions fluid">
+                                      <div class="row">
+                                        <div class="col-md-12">
+                                          <div class="col-md-offset-3 col-md-9">
+                                            <button type="button" ng-click="checkStep1(client)" class="btn blue button-next">
+                                            <span translate="btn.continue">Continue</span> <i class="m-icon-swapright m-icon-white"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                                  </form>
+
+                                <!--LOAD NESTED STATES-->
+                                <!--<div ui-view="content"></div>-->
+
+                                <div class="tab-pane active" id="tab1">
+                                  <!--BASIC INFO-->
+                                  
+                                </div>
+                                <div class="tab-pane" id="tab2">
+                                  <!--CONTACT DETAILS-->
+                                </div>
+                                <div class="tab-pane" id="tab3">
+                                                           <!--ADDRESS-->
+                                </div>
+                                <div class="tab-pane" id="tab4">
+                                  <!--CONFIRM-->
+                                </div>
+                              </div>
+                            </div>
+                            <!-- FORM BUTTONS HERE-->
+                          </div>
+                        </div><!--was form-->
+                      </div>
+                    </div>
+                  </div>
+                          
+                </div>
             
             <div class="clear-space"></div>
           </div>
