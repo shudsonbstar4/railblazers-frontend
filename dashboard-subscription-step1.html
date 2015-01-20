@@ -4,12 +4,8 @@
   <head>
     <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <script data-require="jquery@*" data-semver="2.1.1" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
-    <script data-require="angular.js@*" data-semver="1.3.7" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js"></script>
-    <script data-require="ui-bootstrap@*" data-semver="0.12.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
     <link href="assets/css/style.css" rel="stylesheet">
-    <script src="assets/js/app.js" type="javascript"></script>
+    <title>Railblazers - Account Dashboard - Change Account Plan</title>
   </head>
 
   <body ng-app="myApp" ng-controller="ChangeUserPlanController">
@@ -84,158 +80,294 @@
         <h1>Account Dashboard</h1>
         <ul class="breadcrumb">
           <li><a href="../HTML/dashboard-settings.html">Account Dashboard</a></li>
-          <li><a href="../HTML/dashboard-settings.html">Subscription</a></li>
-          <li><a href="../HTML/dashboard-settings.html">Change Plan</a></li>
+          <li><a href="../HTML/dashboard-subscription.html">Subscription</a></li>
+          <li><a href="../HTML/dashboard-subscription.html">Change Plan</a></li>
         </ul>
 
         <div class="row">
           <div class="col-md-10">
 
             <!-- BEGIN PAGE CONTENT-->
-      <div class="row margin-bottom-20">
-        <div class="col-md-12">
-                    <div class="portlet" id="form_wizard_1">
-                      <div class="portlet-body form">
-                        <div class="form-horizontal"><!--was form-->
-                          <div class="form-wizard">
-                            <div class="form-body">
-                              <ul class="nav nav-pills nav-justified steps">
-                                <!--<li ng-class="{'active': activeTab===1, 'done': step1 ===true}">-->
-                                <li ui-sref-active="active" ng-class="{'done': step1 ===true}">
-                                  <a ui-sref="client-addnew.step-1" data-toggle="tab" class="step" >
-                                  <span class="number">
-                                    1
-                                  </span>
-                                  <span class="desc">
-                                    <i class="fa fa-check"></i> Billing Information
-                                  </span>
-                                  </a>
-                                </li>
-                                <li ui-sref-active="active" ng-class="{'done': step2 ===true}">
-                                  <a href ng-click="checkStep1(client, AddClientStep1)" class="step">
-                                  <span class="number">
-                                    2
-                                  </span>
-                                  <span class="desc">
-                                    <i class="fa fa-check"></i> Review
-                                  </span>
-                                  </a>
-                                </li>
-                                <li ui-sref-active="active" ng-class="{'done': step3 ===true}">
-                                  <a ui-sref="client-addnew.step-3" data-toggle="tab" class="step active">
-                                  <span class="number">
-                                    3
-                                  </span>
-                                  <span class="desc">
-                                    <i class="fa fa-check"></i> Confirmation
-                                  </span>
-                                  </a>
-                                </li>
-                                
-                              </ul>
-                              <div id="bar" class="progress progress-striped" role="progressbar">
-                                <div class="progress-bar progress-bar-success" ng-style="{'width': percentBar}">
-                                </div>
-                              </div>
-                              <div class="tab-content">
-                                  <form role="form" name="AddClientStep1" novalidate>
-                                    <fieldset>
-                                    <legend>Billing Information</legend>
-                                    <div class="form-group">
-                                      <label class="control-label col-md-3">
-                                          <span class="required">*</span>Full Name:
-                                      </label>
-                                      <div class="col-md-5">
-                                        <input type="text" class="form-control" name="clientFirstName" ng-model="client.firstName" />
-                                        
-                                      </div>
-                                    </div>
-                                        <!--<div ng-show="AddClientStep1.clientFirstName.$invalid">
-                                          <br />
-                                           <div class="alert alert-danger">
-                                            <span>Client Details Invalid:</span>
-                                            <span ng-show="AddClientStep1.clientFirstName.$error.required">This field is required. Please enter a value.</span>
-                                          </div>
-                                     </div>-->
-                                    <div class="form-group">
-                                      <label class="control-label col-md-3">
-                                        <span translate="ClientAdd.lastName">Last Name:</span>
-                                      </label>
-                                      <div class="col-md-5">
-                                        <input type="text" class="form-control" name="last-name" ng-model="client.lastName"/>
-                                      </div>
-                                    </div>
-                                    <div class="form-group">
-                                      <label class="control-label col-md-3"><!--<span class="required">*</span>-->
-                                        <span translate="ClientAdd.email">Email Address:</span>
-                                      </label>
-                                      <div class="col-md-5">
-                                        <input type="text" class="form-control" name="email" ng-model="client.emailAddress"/>
-                                        <span class="help-block">
-                                          <span translate="ClientAdd.emailPrompt">Enter the email where appointment notices should be sent to</span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                    <div class="form-group">
-                                      <label class="control-label col-md-3"><!--<span class="required">*</span>-->
-                                        <span translate="ClientAdd.password">Password:</span>
-                                      </label>
-                                      <div class="col-md-5">
-                                        <input type="password" class="form-control" name="password" ng-model="client.password" />
-                                        <span class="help-block">
-                                          <span translate="ClientAdd.passwordPrompt">Providing the client with a password lets them login to the scheduler</span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                    <!--<div class="form-group">
-                                      <label class="control-label col-md-3"><span class="required">*</span>Confirm Password:
-                                      
-                                      </label>
-                                      <div class="col-md-5">
-                                        <input type="password" class="form-control" name="rpassword"/>
-                                      </div>
-                                    </div>-->
-
-                                    <div class="form-actions fluid">
-                                      <div class="row">
-                                        <div class="col-md-12">
-                                          <div class="col-md-offset-3 col-md-9">
-                                            <button type="button" ng-click="checkStep1(client)" class="btn blue button-next">
-                                            <span translate="btn.continue">Continue</span> <i class="m-icon-swapright m-icon-white"></i>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </fieldset>
-                                  </form>
-
-                                <!--LOAD NESTED STATES-->
-                                <!--<div ui-view="content"></div>-->
-
-                                <div class="tab-pane active" id="tab1">
-                                  <!--BASIC INFO-->
-                                  
-                                </div>
-                                <div class="tab-pane" id="tab2">
-                                  <!--CONTACT DETAILS-->
-                                </div>
-                                <div class="tab-pane" id="tab3">
-                                                           <!--ADDRESS-->
-                                </div>
-                                <div class="tab-pane" id="tab4">
-                                  <!--CONFIRM-->
-                                </div>
-                              </div>
-                            </div>
-                            <!-- FORM BUTTONS HERE-->
+            <div class="row margin-bottom-20">
+              <div class="col-md-12">
+                <tabset>
+                  <tab>
+                    <tab-heading>
+                      Billing Information
+                    </tab-heading>
+                    <form class="form-horizontal" role="form" name="AddClientStep1" novalidate>
+                      <br />
+                      <span class="help-block">You have selected to sign up for the <strong>Basic Plan</strong> at <strong>$19.95/month</strong>. Please fill out the information below to proceed.</span>
+                      <progressbar class="progress-striped" animate="false" value="33" type="success"><b>33%</b></progressbar>
+                      <fieldset>
+                      <legend>Billing Information</legend>
+                      <!-- FIRST COL -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>First Name:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.firstName" />
                           </div>
-                        </div><!--was form-->
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Address Line 1:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.address" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>City:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.city" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Zip Code:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.zipCode" />
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                          
-                </div>
+                      <!--BEGIN SECOND COL-->
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Last Name:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.firstName" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Address Line 2:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.address" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>State:
+                          </label>
+                          <div class="col-md-8">
+                            <select class="form-control" ng-model="client.state" ng-options="state for state in states"></select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Phone:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.phone" />
+                          </div>
+                        </div>
+                      </div>
+                      <!--END SECOND COL-->
+
+                      <div class="col-md-12">
+                        <hr />
+                      </div>
+
+                      <!--BEGIN STRIPE -->
+                      <p><strong>Credit/Debit Card Information:</strong></p>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Card Number:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>CVV:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                      <!--END STRIPE -->
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="col-md-offset-4 col-md-8 text-right">
+                              <button type="button" ng-click="checkStep1(client)" class="btn btn-info">
+                              <span>Continue</span> <i class="glyphicon glyphicon-chevron-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    </form>
+                  </tab>
+                  <tab>
+                    <tab-heading>
+                      Review
+                    </tab-heading>
+
+                    <form class="form-horizontal" role="form" name="AddClientStep1" novalidate>
+                      <br />
+                      <span class="help-block">Please confirm that the information below is correct, then click 'Continue' to submit your payment and subscribe.</span>
+                      <progressbar class="progress-striped" animate="false" value="66" type="success"><b>66%</b></progressbar>
+                      <fieldset>
+                      <legend>Review Subscription Information</legend>
+                      <!-- FIRST COL -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>First Name:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">John</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Address Line 1:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">123 Maple St</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>City:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Mobile</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Zip Code:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">12345</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--BEGIN SECOND COL-->
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Last Name:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Doe</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Address Line 2:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Suite #123</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>State:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Alabama</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Phone:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">123-456-6789</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END SECOND COL-->
+
+                      <div class="col-md-12">
+                        <hr />
+                      </div>
+
+                      <!--BEGIN STRIPE -->
+                      <p class="col-md-12"><strong>Credit/Debit Card Information:</strong></p>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Card Number:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">XXXXXXXXXXX1234</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>CVV:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">123</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END STRIPE -->
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="col-md-4">
+                              <button class="btn btn-default">
+                                <i class="glyphicon glyphicon-chevron-left"></i> Back
+                              </button>
+                            </div>
+                            <div class="col-md-offset-4 col-md-4 text-right">
+                              <button type="button" ng-click="checkStep1(client)" class="btn btn-info">
+                                Continue <i class="glyphicon glyphicon-chevron-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    </form>
+                  </tab>
+                 <tab>
+                  <tab-heading>
+                    Confirmation
+                  </tab-heading>
+                  <form class="form-horizontal text-center">
+                    <fieldset>
+                      <br />
+                      <progressbar class="progress-striped" animate="false" value="100" type="success"><b>100%</b></progressbar>
+                      <h3>Thank you for your subscription for the <strong>Basic Plan</strong> at <strong>$19.95/month</strong>!</h3>
+                      <h4>Put a bird on it heirloom kale chips vegan sustainable blog gluten-free pug. Chia kitsch leggings, sartorial plaid meditation vinyl tilde +1. Four loko before they sold out kale chips you probably haven't heard of them organic, brunch try-hard craft beer semiotics. +1 seitan locavore Banksy cardigan.</h4>
+                      <h4>Biodiesel Intelligentsia kale chips food truck literally pop-up, sartorial Blue Bottle leggings fingerstache readymade McSweeney's.</h4>
+                      <h4>We will continue to bill you each month until you cancel your subscription. Thank you for your business!</h4>
+                      <button class="btn btn-info blue">Return to Subscriptions Page</button>
+                    </fieldset>
+                  </form>
+                 </tab>
+                </tabset>
+
+              </div>
+                      
+            </div>
             
             <div class="clear-space"></div>
           </div>
@@ -267,6 +399,14 @@
         <p class="text-muted">&copy; Copyright 2015 Railblazers</p>
       </div>
     </footer>
+
+    <script data-require="jquery@*" data-semver="2.1.1" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+    <!--<script data-require="angular.js@*" data-semver="1.3.7" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js"></script>-->
+    <script src="../HTML/assets/js/angular.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.12.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    
+    <script src="../HTML/assets/js/app.js"></script>
       
   </body>
 

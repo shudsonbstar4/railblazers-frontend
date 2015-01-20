@@ -168,6 +168,10 @@ h1{
   margin-right:10px;
 }
 
+.form-text{
+  padding-top: 7px;
+}
+
 a, a:hover, a:active {
   text-decoration: none;
 }
