@@ -29,8 +29,8 @@
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-settings.html">Settings</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-subscription.html">Subscription</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Events</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Groups</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="my-events.html">My Events</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="my-groups.html">My Groups</a></li>
               </ul>
             </span>
             <button class="btn btn-default">Sign Out</button>
@@ -66,7 +66,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
               <ul class="nav navbar-nav"> <!--navbar-nav">-->
-                <li><a name="settings" href="dashboard-settings.html">Settings &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
+                <li><a name="dashboard-settings.html" href="dashboard-settings.html">Settings &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
                   <li class="active"><a name="subscription" href="dashboard-subscription.html">Subscription &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-credit-card"></span></a></li>
                   <li ><a name="myEvents" href="my-events.html">My Events &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
                   <li ><a name="myGroups" href="my-groups.html">My Groups &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-globe"></span></a></li>
@@ -82,62 +82,83 @@
         <ul class="breadcrumb">
           <li><a href="../HTML/dashboard-settings.html">Account Dashboard</a></li>
           <li><a href="../HTML/dashboard-settings.html">Events</a></li>
-          <li><a href="../HTML/dashboard-settings.html">Future Events</a></li>
+          <li><a href="../HTML/dashboard-settings.html">My Events</a></li>
         </ul>
         <!--Tab Nav-->
  <div class="row">
   <div class="span12">
             
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#future">Future Events</a></li>
+  <li role="presentation"><a href="#future">Future Events</a></li>
   <li role="presentation"><a href="#past">Past Events</a></li>
-  <li role="presentation"><a href="#my_events">Events You've Created</a></li>
+  <li role="presentation"><a href="created-events.html">Events You've Created</a></li>
 </ul>
   
 
            <!--/Tab Nav-->
- <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-4" ng-repeat="event in events">
-        <div class="pin-background">
-          <h3>NoDa Knitters</h3>
-          <img src="http://placehold.it/250x250" alt="filler" />
-          <h4 class="remove-margin">Amelie's</h4>
-          <p>Monday, February 9, 2015<br />
-            10:30am - 12:30pm
-          </p>
-          <p><strong>23 members going</strong></p>
-          <button class="btn btn-danger btn-block red">RSVP</button>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-4" ng-repeat="event in events">
-        <div class="pin-background">
-          <h3>CLT BeerUp</h3>
-          <img src="http://placehold.it/250x250" alt="filler" />
-          <h4 class="remove-margin">Sycamore Brewing</h4>
-          <p>Friday, March 30, 2015<br />
-            7:30pm - 9:30pm
-          </p>
-          <p><strong>64 members going</strong></p>
-          <button class="btn btn-danger btn-block red">RSVP</button>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-4" ng-repeat="event in events">
-        <div class="pin-background">
-          <h3>Ballantyne Golfers</h3>
-          <img src="http://placehold.it/250x250" alt="filler" />
-          <h4 class="remove-margin">Ballantyne Country Club</h4>
-          <p>Thursday, April 14, 2015<br />
-            7:30pm - 9:30pm
-          </p>
-          <p><strong>29 members going</strong></p>
-       <button class="btn btn-danger btn-block red">RSVP</button>
-        </div>
-      </div>
-    </div>
-    <div class="row clear-space text-center">
-      <button class="btn btn-success btn-lg green">Show me more!</button>
-    </div>
-    <div class="clearfix clear-space"></div>
+             <h2><a href="#future">Future Events</a></h2>
+  
+
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-list"></span>
+                <h3 class="panel-title">
+                    Future Events</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/100x100" alt="filler" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                     <div>
+                                   <h4>Noda Knitters</h4>
+                                    <div class="mic-info">
+                                        <strong><p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p></strong>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                    <button class="btn btn-success btn-lg green">Change RSVP</button>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/100x100" alt="filler" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                   <h4>Noda Knitters</h4>
+                                    <div class="mic-info">
+                                        <strong><p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p></strong>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                    <button class="btn btn-success btn-lg green">Change RSVP</button>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+    
+   
    
       <!--</div>-->
       
