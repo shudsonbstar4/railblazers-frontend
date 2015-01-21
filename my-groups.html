@@ -15,8 +15,8 @@
           <div class="navbar-header">
             <a href="#" class="navbar-brand"><img src="assets/img/logo.png" alt="Railblazers" height="45px" /></a>
             <ul class="nav navbar-nav navbar-left">
-              <li><a href="#">Groups</a></li>
-              <li><a href="#">Events</a></li>
+              <li><a href="my-groups.html">Groups</a></li>
+              <li><a href="my-events.html">Events</a></li>
             </ul>
           </div>
           <div class="nav navbar-nav navbar-right">
@@ -27,10 +27,10 @@
                 </a>
                 
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-settings.html">Settings</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-subscription.html">Subscription</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Events</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Groups</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard-settings.html">Settings</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard-subscription.html">Subscription</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="my-events.html">My Events</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="my-groups.html">My Groups</a></li>
               </ul>
             </span>
             <button class="btn btn-default">Sign Out</button>
@@ -53,91 +53,230 @@
             <a href="#" class="link">My Groups</a>
           </div>-->
           <nav class="navbar navbar-inverse sidebar" id="custom-sidebar" role="navigation">
-            <div >
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              </div>
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-                <ul class="nav navbar-nav"> <!--navbar-nav">-->
-                  <li class="active"><a name="settings" href="../HTML/dashboard-settings.html">Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-                  <li ><a name="subscription" href="../HTML/dashboard-subscription.html">Subscription<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-book"></span></a></li>
-                  <li ><a name="myEvents" href="#myEvents">My Events<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
-                  <li ><a name="myGroups" href="#myGroups">My Groups<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
-                </ul>
-              </div>
+          <div >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
             </div>
-          </nav>
-        </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+              <ul class="nav navbar-nav"> <!--navbar-nav">-->
+                <li><a name="dashboard-settings.html" href="dashboard-settings.html">Settings &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
+                  <li><a name="subscription" href="dashboard-subscription.html">Subscription &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-credit-card"></span></a></li>
+                  <li><a name="myEvents" href="my-events.html">My Events &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
+                  <li class="active"><a name="myGroups" href="my-groups.html">My Groups &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-globe"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
 
         <!-- Main div -->
   <div class="col-md-10 content-background">
-        <h1>My Events</h1>
         <ul class="breadcrumb">
-          <li><a href="../HTML/dashboard-settings.html">Account Dashboard</a></li>
-          <li><a href="../HTML/dashboard-settings.html">Events</a></li>
-          <li><a href="../HTML/dashboard-settings.html">Future Events</a></li>
+          <li><a href="dashboard-settings.html">Account Dashboard</a></li>
+          <li><a href="my-groups.html">My Groups</a></li>
         </ul>
         <!--Tab Nav-->
  <div class="row">
   <div class="span12">
             
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#future">Future Events</a></li>
-  <li role="presentation"><a href="#past">Past Events</a></li>
-  <li role="presentation"><a href="#my_events">Events You've Created</a></li>
+  <li role="presentation" class="active"><a href="#joined">My Groups</a></li>
+  <li role="presentation"><a href="created-groups.html">Groups You've Created</a></li>
 </ul>
   
 
            <!--/Tab Nav-->
- <div class="row">
-      <div class="col-md-3 col-sm-3 col-xs-4" ng-repeat="event in events">
-        <div class="pin-background">
-          <h3>NoDa Knitters</h3>
-          <img src="http://placehold.it/250x250" alt="filler" />
-          <h4 class="remove-margin">Amelie's</h4>
-          <p>Monday, February 9, 2015<br />
-            10:30am - 12:30pm
-          </p>
-          <p><strong>23 members going</strong></p>
-          <button class="btn btn-danger btn-block red">RSVP</button>
+  
+
+        <div class="panel panel-default widget">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-list"></span>
+                <h3 class="panel-title">
+                    My Groups</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1 col-md-1">
+                                <img src="http://placehold.it/80x80" alt="filler" /></div>
+                          <div class="col-xs-10 col-md-11">
+                                <div>
+                                     <div>
+                                   <h3>Ruby UpMeet</h3>
+                                   <h4>67 Members</h4>
+                                    <div class="mic-info">
+                                        <h5>Next UpMeet</h5>
+                                        <p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    Program the Rubies with others. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>34 members going</p></strong>
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                     <a data-toggle="modal" href="#myModal" class="btn btn-danger">Leave Group</a>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1 col-md-1">
+                                <img src="http://placehold.it/80x80" alt="filler" /></div>
+                          <div class="col-xs-10 col-md-11">
+                                <div>
+                                     <div>
+                                   <h3>Ruby UpMeet</h3>
+                                   <h4>67 Members</h4>
+                                    <div class="mic-info">
+                                        <h5>Next UpMeet</h5>
+                                        <p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    Program the Rubies with others. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>34 members going</p></strong>
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                     <a data-toggle="modal" href="#myModal" class="btn btn-danger">Leave Group</a>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1 col-md-1">
+                                <img src="http://placehold.it/80x80" alt="filler" /></div>
+                          <div class="col-xs-10 col-md-11">
+                                <div>
+                                     <div>
+                                   <h3>Ruby UpMeet</h3>
+                                   <h4>67 Members</h4>
+                                    <div class="mic-info">
+                                        <h5>Next UpMeet</h5>
+                                        <p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    Program the Rubies with others. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>34 members going</p></strong>
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                     <a data-toggle="modal" href="#myModal" class="btn btn-danger">Leave Group</a>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1 col-md-1">
+                                <img src="http://placehold.it/80x80" alt="filler" /></div>
+                          <div class="col-xs-10 col-md-11">
+                                <div>
+                                     <div>
+                                   <h3>Ruby UpMeet</h3>
+                                   <h4>67 Members</h4>
+                                    <div class="mic-info">
+                                        <h5>Next UpMeet</h5>
+                                        <p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    Program the Rubies with others. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>34 members going</p></strong>
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                     <a data-toggle="modal" href="#myModal" class="btn btn-danger">Leave Group</a>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                      <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-1 col-md-1">
+                                <img src="http://placehold.it/80x80" alt="filler" /></div>
+                          <div class="col-xs-10 col-md-11">
+                                <div>
+                                     <div>
+                                   <h3>Ruby UpMeet</h3>
+                                   <h4>67 Members</h4>
+                                    <div class="mic-info">
+                                        <h5>Next UpMeet</h5>
+                                        <p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    Program the Rubies with others. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>34 members going</p></strong>
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                     <a data-toggle="modal" href="#myModal" class="btn btn-danger">Leave Group</a>
+                                 </div>
+                                </div>
+                               </div>
+                              </div>
+                             </li>
+                            </div>
+
+             <!--modal -->
+
+        <div class="container">
+         <div class="row">
+          <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                    <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                               <h4 class="modal-title" id="myModalLabel">Leave Group</h4>
+              </div>
+                  <div class="modal-body">
+                            <h4>Are you sure?</h4>
+                      
+                    <div class="modal-footer">
+                     <div class="btn-group">
+                              <button class="btn btn-primary" data-dismiss="modal">Stay</button>
+                              <button class="btn btn-danger">Go</button>
+                   </div>
+                  </div>
+                 </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+               </div><!-- /.modal -->
+              </div>
+             </div>
+            </div>
+           </div> 
+          </div>
+         </div>
         </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-4" ng-repeat="event in events">
-        <div class="pin-background">
-          <h3>CLT BeerUp</h3>
-          <img src="http://placehold.it/250x250" alt="filler" />
-          <h4 class="remove-margin">Sycamore Brewing</h4>
-          <p>Friday, March 30, 2015<br />
-            7:30pm - 9:30pm
-          </p>
-          <p><strong>64 members going</strong></p>
-          <button class="btn btn-danger btn-block red">RSVP</button>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-3 col-xs-4" ng-repeat="event in events">
-        <div class="pin-background">
-          <h3>Ballantyne Golfers</h3>
-          <img src="http://placehold.it/250x250" alt="filler" />
-          <h4 class="remove-margin">Ballantyne Country Club</h4>
-          <p>Thursday, April 14, 2015<br />
-            7:30pm - 9:30pm
-          </p>
-          <p><strong>29 members going</strong></p>
-       <button class="btn btn-danger btn-block red">RSVP</button>
-        </div>
-      </div>
-    </div>
-    <div class="row clear-space text-center">
-      <button class="btn btn-success btn-lg green">Show me more!</button>
-    </div>
-    <div class="clearfix clear-space"></div>
+  
+            <!--modal -->
    
       <!--</div>-->
       

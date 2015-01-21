@@ -68,8 +68,8 @@
               <ul class="nav navbar-nav"> <!--navbar-nav">-->
                 <li><a name="dashboard-settings.html" href="dashboard-settings.html">Settings &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
                   <li><a name="subscription" href="dashboard-subscription.html">Subscription &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-credit-card"></span></a></li>
-                   <li class="active"><a name="myEvents" href="my-events.html">My Events &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
-                  <li ><a name="myGroups" href="my-groups.html">My Groups &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-globe"></span></a></li>
+                  <li><a name="myEvents" href="my-events.html">My Events &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
+                  <li class="active"><a name="myGroups" href="my-groups.html">My Groups &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-globe"></span></a></li>
               </ul>
             </div>
           </div>
@@ -78,37 +78,29 @@
 
         <!-- Main div -->
   <div class="col-md-10 content-background">
-        <h1>Events You've Created</h1>
         <ul class="breadcrumb">
           <li><a href="dashboard-settings.html">Account Dashboard</a></li>
-          <li><a href="my-events.html">All Events</a></li>
-          <li><a href="created-events.html">Events You've Created</a></li>
+          <li><a href="my-groups.html">My Groups</a></li>
+          <li><a href="created-groups.html">My Groups</a></li>
         </ul>
         <!--Tab Nav-->
  <div class="row">
   <div class="span12">
             
 <ul class="nav nav-tabs">
-  <li role="presentation"><a href="my-events.html#future">Future Events</a></li>
-  <li role="presentation"><a href="my-events.html/#past">Past Events</a></li>
-  <li role="presentation"><a href="created-events.html">Events You've Created</a></li>
+  <li role="presentation"><a href="my-groups.html">My Groups</a></li>
+  <li role="presentation" class="active"><a href="created-groups.html">Groups You've Created</a></li>
 </ul>
   
 
            <!--/Tab Nav-->
+  
 
-            <a href="#create-new" class="btn btn-primary btn-lg btn-block" role="button"><span class="glyphicon glyphicon-plus"></span>Create New Event</a>
-         
-            
-     <h2><a href="#created">Events You've Created</a></h2>
- 
-
-   
-        <div class="panel panel-default widget">
+       <div class="panel panel-default widget">
             <div class="panel-heading">
                 <span class="glyphicon glyphicon-pencil"></span>
                 <h3 class="panel-title">
-                    Your Events</h3>
+                    Groups You've Created</h3>
             </div>
             <div class="panel-body">
                 <ul class="list-group">
@@ -135,7 +127,7 @@
                                     <button type="button" class="btn btn-success btn-sm" title="Approve">
                                         <span class="glyphicon glyphicon-ok"></span>
                                     </button>
-                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Remove UpMeet</a>
+                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Archive Group</a>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +155,7 @@
                                     <button type="button" class="btn btn-success btn-sm" title="Approve">
                                         <span class="glyphicon glyphicon-ok"></span>
                                     </button>
-                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Remove UpMeet</a>
+                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Archive Group</a>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +183,7 @@
                                     <button type="button" class="btn btn-success btn-sm" title="Approve">
                                         <span class="glyphicon glyphicon-ok"></span>
                                     </button>
-                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Remove UpMeet</a>
+                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Archive Group</a>
                     <li class="list-group-item">
                         <div class="row">
                             <div class="col-xs-2 col-md-1">
@@ -215,7 +207,7 @@
                                     <button type="button" class="btn btn-success btn-sm" title="Approve">
                                         <span class="glyphicon glyphicon-ok"></span>
                                     </button>
-                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Remove UpMeet</a>
+                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Archive Group</a>
                                      <li class="list-group-item">
                         <div class="row">
                             <div class="col-xs-2 col-md-1">
@@ -239,42 +231,48 @@
                                     <button type="button" class="btn btn-success btn-sm" title="Approve">
                                         <span class="glyphicon glyphicon-ok"></span>
                                     </button>
-                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Remove UpMeet</a>
+                                   <a data-toggle="modal" href="#myModal" class="btn btn-danger">Archive Group</a>
                                    </div>
-                                  </div>
-                                 </div>
-                                </li>
-                               </ul>
-              
-            <div class="container">
-             <div class="row">
-              <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-               <div class="modal-dialog">
-                <div class="modal-content">
- 
-             <div class="modal-header">
-                             <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                               <h4 class="modal-title" id="myModalLabel">Cancel This UpMeet?</h4>
-             </div>
-                <div class="modal-body">
-                    <h4>Are you sure?</h4>
-                    <p>This will cancel the UpMeet you have scheduled.</p>
-                </div>
-                <div class="modal-footer">
-                    <div class="btn-group">
-                    <button class="btn btn-danger">Cancel Upmeet</button>
-                    <button class="btn btn-primary" data-dismiss="modal">Go Back</button>
-                </div>
-                 </div>
-                </div><!-- /.modal-content -->
-               </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+       
+        <!--modal -->
+
+        <div class="container">
+         <div class="row">
+          <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                    <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                               <h4 class="modal-title" id="myModalLabel">Archive This Group</h4>
+              </div>
+                  <div class="modal-body">
+                            <h4>Are you sure?</h4>
+                      
+                    <div class="modal-footer">
+                     <div class="btn-group">
+                              <button class="btn btn-primary">Yaaas</button>
+                              <button class="btn btn-danger" data-dismiss="modal">Nope</button>
+                   </div>
+                  </div>
+                 </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+               </div><!-- /.modal -->
+              </div>
              </div>
             </div>
-           </div>
-          </div> 
-                                
+           </div> 
+          </div>
+         </div>
+        </div>
+      </div>
+
+        <!--/modal -->
                 <a href="#more" class="btn btn-primary btn-lg btn-block" role="button" style="width: 100px; border: 1px padding:5 10px"><span class="glyphicon glyphicon-refresh"></span> More</a>
+      
       <!--</div>-->
       
 
