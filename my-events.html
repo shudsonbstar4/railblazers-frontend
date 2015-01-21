@@ -15,8 +15,8 @@
           <div class="navbar-header">
             <a href="#" class="navbar-brand"><img src="assets/img/logo.png" alt="Railblazers" height="45px" /></a>
             <ul class="nav navbar-nav navbar-left">
-              <li><a href="#">Groups</a></li>
-              <li><a href="#">Events</a></li>
+              <li><a href="my-groups.html">Groups</a></li>
+              <li><a href="my-events.html">Events</a></li>
             </ul>
           </div>
           <div class="nav navbar-nav navbar-right">
@@ -27,8 +27,8 @@
                 </a>
                 
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-settings.html">Settings</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-subscription.html">Subscription</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard-settings.html">Settings</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard-subscription.html">Subscription</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="my-events.html">My Events</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="my-groups.html">My Groups</a></li>
               </ul>
@@ -67,8 +67,8 @@
             <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
               <ul class="nav navbar-nav"> <!--navbar-nav">-->
                 <li><a name="dashboard-settings.html" href="dashboard-settings.html">Settings &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
-                  <li class="active"><a name="subscription" href="dashboard-subscription.html">Subscription &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-credit-card"></span></a></li>
-                  <li ><a name="myEvents" href="my-events.html">My Events &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
+                  <li><a name="subscription" href="dashboard-subscription.html">Subscription &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-credit-card"></span></a></li>
+                  <li class="active"><a name="myEvents" href="my-events.html">My Events &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
                   <li ><a name="myGroups" href="my-groups.html">My Groups &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-globe"></span></a></li>
               </ul>
             </div>
@@ -78,10 +78,10 @@
 
         <!-- Main div -->
   <div class="col-md-10 content-background">
-        <h1>My Events</h1>
+        <h1>All Events</h1>
         <ul class="breadcrumb">
-          <li><a href="../HTML/dashboard-settings.html">Account Dashboard</a></li>
-          <li><a href="../HTML/dashboard-settings.html">Events</a></li>
+          <li><a href="dashboard-settings.html">Account Dashboard</a></li>
+          <li><a href="my-events.html">All Events</a></li>
           <li><a href="../HTML/dashboard-settings.html">My Events</a></li>
         </ul>
         <!--Tab Nav-->
@@ -89,7 +89,7 @@
   <div class="span12">
             
 <ul class="nav nav-tabs">
-  <li role="presentation"><a href="#future">Future Events</a></li>
+  <li role="presentation" class="active"><a href="#future">Future Events</a></li>
   <li role="presentation"><a href="#past">Past Events</a></li>
   <li role="presentation"><a href="created-events.html">Events You've Created</a></li>
 </ul>
@@ -114,19 +114,21 @@
                           <div class="col-xs-10 col-md-11">
                                 <div>
                                      <div>
-                                   <h4>Noda Knitters</h4>
+                                   <h3>Noda Knitters</h3>
+                                   <h4>February UpMeet</h4>
                                     <div class="mic-info">
-                                        <strong><p>Amelie's<br>
+                                        <p>Amelie's<br>
                                          2.17.2015<br>
-                                         3:30-5:30 PM</p></strong>
+                                         3:30-5:30 PM</p>
                                     </div>
                                 </div>
                                 <div class="paragraph-text">
                                     This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>29 members going</p></strong>
                                 </div>
                                  <div class="action">
                                     <div class="row clear-space text-center">
-                                    <button class="btn btn-danger btn-md red">Change RSVP</button>
+                                     <a data-toggle="modal" href="#myModal" class="btn btn-danger">Change RSVP</a>
                                  </div>
                                 </div>
                             </div>
@@ -138,44 +140,21 @@
                                 <img src="http://placehold.it/80x80" alt="filler" /></div>
                             <div class="col-xs-10 col-md-11">
                                 <div>
-                                   <h4>Noda Knitters</h4>
+                                  <h3>Noda Knitters</h3>
+                                  <h4>February UpMeet</h4>
                                     <div class="mic-info">
-                                        <strong><p>Amelie's<br>
+                                        <p>Amelie's<br>
                                          2.17.2015<br>
-                                         3:30-5:30 PM</p></strong>
+                                         3:30-5:30 PM</p>
                                     </div>
                                 </div>
                                 <div class="paragraph-text">
                                     This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                      <strong><p>29 members going</p></strong>
                                 </div>
                                  <div class="action">
                                     <div class="row clear-space text-center">
-                                    <button class="btn btn-danger btn-md red">Change RSVP</button>
-                                 </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                     <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-2 col-md-1">
-                                <img src="http://placehold.it/80x80" alt="filler" /></div>
-                            <div class="col-xs-10 col-md-11">
-                                <div>
-                                     <div>
-                                   <h4>Noda Knitters</h4>
-                                    <div class="mic-info">
-                                        <strong><p>Amelie's<br>
-                                         2.17.2015<br>
-                                         3:30-5:30 PM</p></strong>
-                                    </div>
-                                </div>
-                                <div class="paragraph-text">
-                                    This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
-                                </div>
-                                 <div class="action">
-                                    <div class="row clear-space text-center">
-                                    <button class="btn btn-danger btn-md red">Change RSVP</button>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-danger">Change RSVP</a>
                                  </div>
                                 </div>
                             </div>
@@ -188,19 +167,48 @@
                             <div class="col-xs-10 col-md-11">
                                 <div>
                                      <div>
-                                   <h4>Noda Knitters</h4>
+                                   <h3>Noda Knitters</h3>
+                                   <h4>February UpMeet</h4>
                                     <div class="mic-info">
-                                        <strong><p>Amelie's<br>
+                                        <p>Amelie's<br>
                                          2.17.2015<br>
-                                         3:30-5:30 PM</p></strong>
+                                         3:30-5:30 PM</p>
                                     </div>
                                 </div>
                                 <div class="paragraph-text">
                                     This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>29 members going</p></strong>
                                 </div>
                                  <div class="action">
                                     <div class="row clear-space text-center">
-                                    <button class="btn btn-danger btn-md red">Change RSVP</button>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-danger">Change RSVP</a>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                     <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-xs-2 col-md-1">
+                                <img src="http://placehold.it/80x80" alt="filler" /></div>
+                            <div class="col-xs-10 col-md-11">
+                                <div>
+                                     <div>
+                                    <h3>Noda Knitters</h3>
+                                    <h4>February UpMeet</h4>
+                                    <div class="mic-info">
+                                        <p>Amelie's<br>
+                                         2.17.2015<br>
+                                         3:30-5:30 PM</p>
+                                    </div>
+                                </div>
+                                <div class="paragraph-text">
+                                    This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>29 members going</p></strong>
+                                </div>
+                                 <div class="action">
+                                    <div class="row clear-space text-center">
+                                     <a data-toggle="modal" href="#myModal" class="btn btn-danger">Change RSVP</a>
                                  </div>
                                 </div>
                             </div>
@@ -213,25 +221,64 @@
                             <div class="col-xs-10 col-md-11">
                                 <div>
                                      <div>
-                                   <h4>Noda Knitters</h4>
+                                   <h3>Noda Knitters</h3>
+                                   <h4>February UpMeet</h4>
                                     <div class="mic-info">
-                                        <strong><p>Amelie's<br>
+                                        <p>Amelie's<br>
                                          2.17.2015<br>
-                                         3:30-5:30 PM</p></strong>
+                                         3:30-5:30 PM</p>
                                     </div>
                                 </div>
                                 <div class="paragraph-text">
                                     This group is for people who love knitting things. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>29 members going</p></strong>
                                 </div>
                                  <div class="action">
                                     <div class="row clear-space text-center">
-                                    <button class="btn btn-danger btn-md red">Change RSVP</button>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-danger">Change RSVP</a>
                                  </div>
                                 </div>
                             </div>
                         </div>
                     </li>
                 </div>
+
+
+                   <div class="container">
+                    <div class="row">
+                     <div id="myModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                       <div class="modal-content">
+                        <div class="modal-header">
+                             <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                               <h4 class="modal-title" id="myModalLabel">Change RSVP</h4>
+                    </div>
+                          <div class="modal-body">
+                            <h4>Are you sure?</h4>
+                           <div class="col-lg-6">
+                            <p>Fill this out.</p>
+                              <label for="inputEmail3" class="col-md-2 control-label">Additional Guests:</label>
+                    <div class="col-md-5">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="checkbox" id="inlineCheckbox3" value="option3"> Add Guests
+                        </label>
+                       </div>
+                      </div>
+                    </div>
+                          <div class="modal-footer">
+                           <div class="btn-group">
+                              <button class="btn btn-primary">Save Changes</button>
+                              <button class="btn btn-danger" data-dismiss="modal">Cancel Changes</button>
+                          </div>
+                         </div>
+                       </div><!-- /.modal-content -->
+                   </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+      </div>
+    </div>
+   </div>
+  </div> 
     
 
 
@@ -253,15 +300,17 @@
                             <div class="col-xs-10 col-md-11">
                                 <div>
                                      <div>
-                                   <h4>Slug Club</h4>
+                                   <h3>Slug Club</h3>
+                                   <h4>February UpMeet</h4>
                                     <div class="mic-info">
-                                        <strong><p>Hogwarts<br>
-                                         2.17.2015<br>
-                                         3:30-5:30 PM</p></strong>
+                                        <p>Hogwarts<br>
+                                         2.17.2014<br>
+                                         3:30-5:30 PM</p>
                                     </div>
                                 </div>
                                 <div class="paragraph-text">
                                     Harry loves Ginny. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                    <strong><p>24 members went</p></strong>
                                 </div>
                               </div>
                             </div>
@@ -273,15 +322,17 @@
                                 <img src="http://placehold.it/80x80" alt="filler" /></div>
                             <div class="col-xs-10 col-md-11">
                                 <div>
-                                   <h4>Dueling Club</h4>
+                                    <h3>Dueling Club</h3>
+                                    <h4>March UpMeet</h4>
                                     <div class="mic-info">
-                                        <strong><p>Amelie's<br>
-                                         2.17.2015<br>
-                                         3:30-5:30 PM</p></strong>
+                                        <p>The Great Hall<br>
+                                         3.21.2014<br>
+                                         3:30-5:30 PM</p>
                                     </div>
                                 </div>
                                 <div class="paragraph-text">
                                      Harry is a Parseltongue. Come be Suzy Homemaker and make some cozy hats or something. Austin pop-up leggings. Vice selfies fixie, health goth retro small batch 8-bit Blue Bottle gastropub.
+                                      <strong><p>16 members went</p></strong>
                                 </div>
                               </div>
                             </div>
@@ -289,7 +340,7 @@
                     </li>
                 </div>
               </div>
-    
+  
    
    
       <!--</div>-->
