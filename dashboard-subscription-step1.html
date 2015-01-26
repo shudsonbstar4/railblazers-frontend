@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Railblazers - Account Dashboard - Change Account Plan</title>
+  </head>
+
+  <body ng-app="myApp" ng-controller="ChangeUserPlanController">
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"><img src="../HTML/assets/img/logo.png" alt="Railblazers" height="45px" /></a>
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="nav navbar-nav navbar-right">
+          <span class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" id="dropdownMenu1">
+                <img src="http://placehold.it/35x35" alt="avatar" class="img-circle" />
+                <span class="caret"></span>
+              </a>
+              
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-settings.html">Settings</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="../HTML/dashboard-subscription.html">Subscription</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Events</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Groups</a></li>
+            </ul>
+          </span>
+          <button class="btn btn-default">Sign Out</button>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="row cheat-background" ui-view>
+      <!-- Filler space for accordion-->
+      <div class="col-md-2">
+        <!--<button class="btn btn-default btn-lg btn-block">Settings</button>
+        <button class="btn btn-default btn-lg btn-block">Subscription</button>
+        <button class="btn btn-default btn-lg btn-block">Events</button>
+        <button class="btn btn-default btn-lg btn-block">Groups</button>-->
+        <!--<div class="link-group text-center">
+          <a href="../HTML/dashboard-settings.html" class="link">Settings</a>
+          <a href="#" class="link">Subscription</a>
+          <a href="#" class="link">My Events</a>
+          <a href="#" class="link">My Groups</a>
+        </div>-->
+        <nav class="navbar navbar-inverse sidebar" id="custom-sidebar" role="navigation">
+          <div >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+              <ul class="nav navbar-nav"> <!--navbar-nav">-->
+                <li><a name="settings" href="../HTML/dashboard-settings.html">Settings &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
+                  <li class="active"><a name="subscription" href="../HTML/dashboard-subscription.html">Subscription &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-credit-card"></span></a></li>
+                  <li ><a name="myEvents" href="#myEvents">My Events &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list"></span></a></li>
+                  <li ><a name="myGroups" href="#myGroups">My Groups &nbsp;<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-globe"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Main div -->
+      <div class="col-md-10 content-background">
+        <h1>Account Dashboard</h1>
+        <ul class="breadcrumb">
+          <li><a href="../HTML/dashboard-settings.html">Account Dashboard</a></li>
+          <li><a href="../HTML/dashboard-subscription.html">Subscription</a></li>
+          <li><a href="../HTML/dashboard-subscription.html">Change Plan</a></li>
+        </ul>
+
+        <div class="row">
+          <div class="col-md-10">
+
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row margin-bottom-20">
+              <div class="col-md-12">
+                <tabset>
+                  <tab>
+                    <tab-heading>
+                      Billing Information
+                    </tab-heading>
+                    <form class="form-horizontal" role="form" name="AddClientStep1" novalidate>
+                      <br />
+                      <span class="help-block">You have selected to sign up for the <strong>Basic Plan</strong> at <strong>$19.95/month</strong>. Please fill out the information below to proceed.</span>
+                      <progressbar class="progress-striped" animate="false" value="33" type="success"><b>33%</b></progressbar>
+                      <fieldset>
+                      <legend>Billing Information</legend>
+                      <!-- FIRST COL -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>First Name:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.firstName" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Address Line 1:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.address" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>City:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.city" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Zip Code:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.zipCode" />
+                          </div>
+                        </div>
+                      </div>
+                      <!--BEGIN SECOND COL-->
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Last Name:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.firstName" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Address Line 2:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.address" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>State:
+                          </label>
+                          <div class="col-md-8">
+                            <select class="form-control" ng-model="client.state" ng-options="state for state in states"></select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Phone:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" name="clientFirstName" ng-model="client.phone" />
+                          </div>
+                        </div>
+                      </div>
+                      <!--END SECOND COL-->
+
+                      <div class="col-md-12">
+                        <hr />
+                      </div>
+
+                      <!--BEGIN STRIPE -->
+                      <p><strong>Credit/Debit Card Information:</strong></p>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Card Number:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>CVV:
+                          </label>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                      </div>
+                      <!--END STRIPE -->
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="col-md-offset-4 col-md-8 text-right">
+                              <button type="button" ng-click="checkStep1(client)" class="btn btn-info">
+                              <span>Continue</span> <i class="glyphicon glyphicon-chevron-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    </form>
+                  </tab>
+                  <tab>
+                    <tab-heading>
+                      Review
+                    </tab-heading>
+
+                    <form class="form-horizontal" role="form" name="AddClientStep1" novalidate>
+                      <br />
+                      <span class="help-block">Please confirm that the information below is correct, then click 'Continue' to submit your payment and subscribe.</span>
+                      <progressbar class="progress-striped" animate="false" value="66" type="success"><b>66%</b></progressbar>
+                      <fieldset>
+                      <legend>Review Subscription Information</legend>
+                      <!-- FIRST COL -->
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>First Name:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">John</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Address Line 1:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">123 Maple St</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>City:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Mobile</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Zip Code:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">12345</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--BEGIN SECOND COL-->
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Last Name:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Doe</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Address Line 2:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Suite #123</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>State:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">Alabama</p>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              Phone:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">123-456-6789</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END SECOND COL-->
+
+                      <div class="col-md-12">
+                        <hr />
+                      </div>
+
+                      <!--BEGIN STRIPE -->
+                      <p class="col-md-12"><strong>Credit/Debit Card Information:</strong></p>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>Card Number:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">XXXXXXXXXXX1234</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-md-4">
+                              <span class="required">*</span>CVV:
+                          </label>
+                          <div class="col-md-8">
+                            <p class="form-text">123</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--END STRIPE -->
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="col-md-4">
+                              <button class="btn btn-default">
+                                <i class="glyphicon glyphicon-chevron-left"></i> Back
+                              </button>
+                            </div>
+                            <div class="col-md-offset-4 col-md-4 text-right">
+                              <button type="button" ng-click="checkStep1(client)" class="btn btn-info">
+                                Continue <i class="glyphicon glyphicon-chevron-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                    </form>
+                  </tab>
+                 <tab>
+                  <tab-heading>
+                    Confirmation
+                  </tab-heading>
+                  <form class="form-horizontal text-center">
+                    <fieldset>
+                      <br />
+                      <progressbar class="progress-striped" animate="false" value="100" type="success"><b>100%</b></progressbar>
+                      <h3>Thank you for your subscription for the <strong>Basic Plan</strong> at <strong>$19.95/month</strong>!</h3>
+                      <h4>Put a bird on it heirloom kale chips vegan sustainable blog gluten-free pug. Chia kitsch leggings, sartorial plaid meditation vinyl tilde +1. Four loko before they sold out kale chips you probably haven't heard of them organic, brunch try-hard craft beer semiotics. +1 seitan locavore Banksy cardigan.</h4>
+                      <h4>Biodiesel Intelligentsia kale chips food truck literally pop-up, sartorial Blue Bottle leggings fingerstache readymade McSweeney's.</h4>
+                      <h4>We will continue to bill you each month until you cancel your subscription. Thank you for your business!</h4>
+                      <a href="../HTML/dashboard-subscription.html" class="btn btn-info blue">Return to Subscriptions Page</a>
+                    </fieldset>
+                  </form>
+                 </tab>
+                </tabset>
+
+              </div>
+                      
+            </div>
+            
+            <div class="clear-space"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+
+
+    <footer class="footer footer-inverse">
+      <div class="footer-inner text-center">
+        <ul>
+          <li><a href="#"><img src="assets/img/twitter.png" alt="Twitter" /></a></li>
+          <li><a href="#"><img src="assets/img/facebook.png" alt="Facebook" /></a></li>
+          <li><a href="#"><img src="assets/img/blogger.png" alt="Blogger" /></a></li>
+          <li><a href="#"><img src="assets/img/youtube.png" alt="YouTube" /></a></li>
+        </ul>
+        <ul>
+         <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="tos.html">Terms of Service</a></li>
+        </ul>
+        <p class="text-muted">&copy; Copyright 2015 Railblazers</p>
+      </div>
+    </footer>
+
+    <script data-require="jquery@*" data-semver="2.1.1" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+    <!--<script data-require="angular.js@*" data-semver="1.3.7" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js"></script>-->
+    <script src="../HTML/assets/js/angular.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.12.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    
+    <script src="../HTML/assets/js/app.js"></script>
+      
+  </body>
+
+</html>

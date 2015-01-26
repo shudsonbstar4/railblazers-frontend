@@ -146,10 +146,67 @@ h1{
 
 }*/
 
+.green-icon{
+  color:green;
+}
+
+.red-icon{
+  color:red;
+}
+
+.plan-feature{
+  font-weight: bold;
+}
+
+.navbar{
+  border-radius:0;
+  border:0;
+}
+
 .navbar .dropdown{
   display:inline-block;
   margin-right:10px;
 }
+
+.form-text{
+  padding-top: 7px;
+}
+
+.modal .modal-header {
+  border-bottom: none;
+  position: relative;
+}
+.modal .modal-header .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.modal .modal-footer {
+  border-top: none;
+  padding: 0;
+}
+.modal .modal-footer .btn-group > .btn:first-child {
+  border-bottom-left-radius: 0;
+}
+.modal .modal-footer .btn-group > .btn:last-child {
+  border-top-right-radius: 0;
+}
+
+
+.widget .panel-body { padding:0px; }
+.widget .list-group { margin-bottom: 0; }
+.widget .panel-title { display:inline }
+.widget .label-info { float: right; }
+.widget li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
+.widget li.list-group-item:hover { background-color: rgba(86,61,124,.1); }
+.widget .mic-info { color: #666666;font-size: 13px; }
+.widget .action { margin-top:5px; }
+.widget .paragraph-text { font-size: 16px; }
+.widget .btn-block { border-top-left-radius:0px;border-top-right-radius:0px; }
+.widget .btn-block {display: block;width:100%;margin: 10px 0}
 
 a, a:hover, a:active {
   text-decoration: none;
