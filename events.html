@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Railblazers - Account Dashboard - Settings</title>
+  </head>
+
+  <body ng-app="myApp" ng-controller="EventsController">
+    <div class="row" ng-view>
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="#" class="navbar-brand"><img src="assets/img/logo.png" alt="Railblazers" height="45px" /></a>
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="my-groups.html">Groups</a></li>
+              <li class="active"><a href="events.html">Events</a></li>
+            </ul>
+          </div>
+          <div class="nav navbar-nav navbar-right">
+            <span class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" id="dropdownMenu1">
+                  <img src="http://placehold.it/35x35" alt="avatar" class="img-circle" />
+                  <span class="caret"></span>
+                </a>
+                
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard-settings.html">Settings</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard-subscription.html">Subscription</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="my-events.html">My Events</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="my-groups.html">My Groups</a></li>
+              </ul>
+            </span>
+            <button class="btn btn-default">Sign Out</button>
+
+          </div>
+        </div>
+      </nav>
+
+      
+        <!-- Main div -->
+        <div class="col-md-12 content-background">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <h1>Events</h1>
+                <ul class="breadcrumb">
+                  <li><a href="../HTML/events.html">Events</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 text-right">
+                <div class="clear-space"></div>
+                <button class="btn btn-success green">
+                  Create New Event <i class="glyphicon glyphicon-plus"></i> 
+                </button>
+              </div>
+            </div>
+            
+            <!-- First form -->
+            <div ng-repeat="event in events">
+              <div class="row">
+                <div class="col-md-2">
+                  <img src="http://placehold.it/150x150" alt="placeholder" />
+                  <h4 class="text-center">
+                    <a href="#"><i class="glyphicon glyphicon-pencil"></i></a>
+                    <a href="#"><i class="glyphicon glyphicon-trash"></i></a>
+                  </h4>
+                </div>
+                <div class="col-md-10">
+                  <h2 class="custom-heading">{{event.name}}</h2>
+                  <h4 class="custom-heading">{{event.group}}</h4>
+                  <p>{{event.desc}}</p>
+                  <p>
+                    <em>
+                      {{event.date}}<br />
+                      {{event.time}}<br />
+                      {{event.location}}<br />
+                      <a popover-placement="right" popover="Sample text<br />Sample text" popover-title="Members Going" href>{{event.rsvps}} Members Going</a>
+                    </em>
+                  </p>
+                </div>
+              </div>
+              <hr />
+              <div class="clear-space"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+                <button class="btn btn-success green btn-block text-center">
+                  <i class="glyphicon glyphicon-plus"></i> Create a New Event
+                </button>
+              </div>
+              <div class="col-md-3"></div>
+            </div>
+            <div class="clear-space"></div>
+
+          </div><!--container-->
+        </div>
+
+      <!--</div>-->
+      
+
+
+      <footer class="footer footer-inverse">
+        <div class="footer-inner text-center">
+          <ul>
+            <li><a href="#"><img src="assets/img/twitter.png" alt="Twitter" /></a></li>
+            <li><a href="#"><img src="assets/img/facebook.png" alt="Facebook" /></a></li>
+            <li><a href="#"><img src="assets/img/blogger.png" alt="Blogger" /></a></li>
+            <li><a href="#"><img src="assets/img/youtube.png" alt="YouTube" /></a></li>
+          </ul>
+          <ul>
+           <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="tos.html">Terms of Service</a></li>
+          </ul>
+          <p class="text-muted">&copy; Copyright 2015 Railblazers</p>
+        </div>
+      </footer>
+    </div>
+
+    <script data-require="jquery@*" data-semver="2.1.1" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+    <!--<script data-require="angular.js@*" data-semver="1.3.7" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js"></script>-->
+    <script src="../HTML/assets/js/angular.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.12.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    
+    <script src="../HTML/assets/js/app.js"></script>
+      
+  </body>
+
+</html>
