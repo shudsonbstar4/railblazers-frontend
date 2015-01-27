@@ -176,6 +176,29 @@ app.controller('EditEventModalInstanceController', ['$scope', '$timeout', '$moda
 
 	$scope.selectedEvent = selectedEvent;
 
+	$scope.dateOptions = {
+		'starting-day': 0,
+		'format': 'shortDate'
+	};
+
+	$scope.datepickers = {};
+
+	$scope.closeAll = function() {
+	    $scope.datepickers.start = false;
+	    $scope.datepickers.end = false;
+	};
+	
+	$scope.openDT = function($event, which) {
+		$event.preventDefault();
+		$event.stopPropagation();
+
+		$scope.closeAll();
+
+		$scope.datepickers[which] = true;
+	};
+
+	$scope.startDate = new Date();
+
 	$scope.cancel = function(){
 		$modalInstance.dismiss('cancel');
 	};

@@ -10,9 +10,8 @@
             {{successMessage}}
         </p>
     </div>
-	 <p class="delete-paragraph">To change your password to login to TimeTap, fill out the fields below:</p>
      <div class="row">
-        <form name="changePassword">
+        <form name="editEvent">
             <!--<div class="form-group col-md-12 col-adjust">
                 <label class="col-md-4 control-label-3">Current Password:</label>
                 <div class="col-md-8">
@@ -23,28 +22,69 @@
                 </div>
      			
             </div>-->
-            <div class="form-group col-md-12 col-adjust">
-                <label class="col-md-4 control-label-3">Title:</label>
-                <div class="col-md-4">
-                    <input type="password" class="form-control" ng-model="event.name">
-                    
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Title:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <input type="text" class="form-control" ng-model="selectedEvent.name">
                 </div>
-     			
             </div>
-            <div class="form-group col-md-12 col-adjust">
-                <label class="col-md-4 control-label-3" translate="modal.changePasswordConfirmPwdLabel">Confirm New Password:</label>
-                <div class="col-md-8">
-                    <input type="password" class="form-control" Value="" name="accountNewPasswordConfirm" id="accountNewPasswordConfirm" ng-model="password.newPasswordConfirm">
-                    
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="control-label col-md-2 col-sm-2 col-xs-2 col-label-3">Group:</label>
+                <p class="col-md-6 col-sm-6 col-xs-6">{{selectedEvent.group}}</p>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Event Picture:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <input type="file" class="form-control" ng-model="selectedEvent.image">
                 </div>
-     			
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Event Description:</label>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <textarea class="form-control" ng-model="selectedEvent.description" rows="8"></textarea>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Date:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <p class="input-group">
+                      <input type="text" class="form-control" datepicker-popup="shortDate" ng-model="startDate" is-open="datepickers.start"  datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn" ng-click="openDT($event, 'start')"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Start Time:</label>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <p class="input-group">
+                     <!--TIMEPICKER-->
+                      <timepicker ng-model="mystarttime" hour-step="1" minute-step="5" show-meridian="true" mousewheel="false"></timepicker>
+                    <!--END TIMEPICKER-->
+                    </p>
+                </div>
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">End Time:</label>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <p class="input-group">
+                     <!--TIMEPICKER-->
+                      <timepicker ng-model="mystarttime" hour-step="1" minute-step="5" show-meridian="true" mousewheel="false"></timepicker>
+                    <!--END TIMEPICKER-->
+                    </p>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Location:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <input type="text" class="form-control" ng-model="selectedEvent.location">
+                </div>
             </div>
         </form>
      </div>
 
 </div>
 <div class="modal-footer">
-	<button type="button" class="btn green" data-dismiss="modal" ng-click="savePassword(password, account)"><i class="fa fa-save"></i> <span translate="btn.saveNewPwd">Save New Password</span></button>
-	<button type="button" class="btn default" data-dismiss="modal" ng-click="cancel()"><span translate="btn.cancel">Cancel</span></button>
+	<button type="button" class="btn btn-success green" data-dismiss="modal" ng-click="savePassword(password, account)"><i class="glyphicon glyphicon-floppy-disk"></i> Save Event</button>
+	<button type="button" class="btn default" data-dismiss="modal" ng-click="cancel()"><i class="glyphicon glyphicon-remove"></i> Cancel Changes</button>
 </div>
 <!-- END Change Password MODAL FORM-->
