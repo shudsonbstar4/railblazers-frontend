@@ -1,0 +1,37 @@
+[
+	{	
+		"id": 1,
+		"name": "Event 1",
+		"group": "CLT Group",
+		"rsvps": 23,
+		"desc": "Bitters trust fund readymade, hella raw denim cronut listicle normcore PBR&B. Fashion axe gastropub American Apparel selfies, typewriter bespoke normcore Tumblr cornhole Echo Park cred church-key deep v scenester. Food truck aesthetic gluten-free flannel Pinterest, cardigan raw denim twee chambray scenester butcher. Stumptown twee organic mustache cronut. Portland health goth semiotics craft beer, sriracha food truck flannel synth lo-fi YOLO. Twee Portland pug cred, chia beard four dollar toast sriracha dreamcatcher vegan meh American Apparel fingerstache iPhone. Crucifix Carles pop-up, flannel bicycle rights hashtag food truck keytar irony Vice aesthetic gluten-free fingerstache hoodie."
+	},
+	{	
+		"id": 2,
+		"name": "Event 2",
+		"group": "CLT Group",
+		"rsvps": 44,
+		"desc": "Bitters trust fund readymade, hella raw denim cronut listicle normcore PBR&B. Fashion axe gastropub American Apparel selfies, typewriter bespoke normcore Tumblr cornhole Echo Park cred church-key deep v scenester. Food truck aesthetic gluten-free flannel Pinterest, cardigan raw denim twee chambray scenester butcher. Stumptown twee organic mustache cronut. Portland health goth semiotics craft beer, sriracha food truck flannel synth lo-fi YOLO. Twee Portland pug cred, chia beard four dollar toast sriracha dreamcatcher vegan meh American Apparel fingerstache iPhone. Crucifix Carles pop-up, flannel bicycle rights hashtag food truck keytar irony Vice aesthetic gluten-free fingerstache hoodie."
+	},
+	{	
+		"id": 3,
+		"name": "Event 3",
+		"group": "CLT Group",
+		"rsvps": 10,
+		"desc": "Bitters trust fund readymade, hella raw denim cronut listicle normcore PBR&B. Fashion axe gastropub American Apparel selfies, typewriter bespoke normcore Tumblr cornhole Echo Park cred church-key deep v scenester. Food truck aesthetic gluten-free flannel Pinterest, cardigan raw denim twee chambray scenester butcher. Stumptown twee organic mustache cronut. Portland health goth semiotics craft beer, sriracha food truck flannel synth lo-fi YOLO. Twee Portland pug cred, chia beard four dollar toast sriracha dreamcatcher vegan meh American Apparel fingerstache iPhone. Crucifix Carles pop-up, flannel bicycle rights hashtag food truck keytar irony Vice aesthetic gluten-free fingerstache hoodie."
+	},
+	{	
+		"id": 4,
+		"name": "Event 4",
+		"group": "CLT Group",
+		"rsvps": 88,
+		"desc": "Bitters trust fund readymade, hella raw denim cronut listicle normcore PBR&B. Fashion axe gastropub American Apparel selfies, typewriter bespoke normcore Tumblr cornhole Echo Park cred church-key deep v scenester. Food truck aesthetic gluten-free flannel Pinterest, cardigan raw denim twee chambray scenester butcher. Stumptown twee organic mustache cronut. Portland health goth semiotics craft beer, sriracha food truck flannel synth lo-fi YOLO. Twee Portland pug cred, chia beard four dollar toast sriracha dreamcatcher vegan meh American Apparel fingerstache iPhone. Crucifix Carles pop-up, flannel bicycle rights hashtag food truck keytar irony Vice aesthetic gluten-free fingerstache hoodie."
+	},
+	{	
+		"id": 5,
+		"name": "Event 5",
+		"group": "CLT Group",
+		"rsvps": 9,
+		"desc": "Bitters trust fund readymade, hella raw denim cronut listicle normcore PBR&B. Fashion axe gastropub American Apparel selfies, typewriter bespoke normcore Tumblr cornhole Echo Park cred church-key deep v scenester. Food truck aesthetic gluten-free flannel Pinterest, cardigan raw denim twee chambray scenester butcher. Stumptown twee organic mustache cronut. Portland health goth semiotics craft beer, sriracha food truck flannel synth lo-fi YOLO. Twee Portland pug cred, chia beard four dollar toast sriracha dreamcatcher vegan meh American Apparel fingerstache iPhone. Crucifix Carles pop-up, flannel bicycle rights hashtag food truck keytar irony Vice aesthetic gluten-free fingerstache hoodie."
+	}
+]

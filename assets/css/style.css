@@ -14,6 +14,14 @@ h1{
   font-weight:bold;
 }
 
+hr{
+  border-top:1px solid #bbb;
+}
+
+.custom-heading {
+  margin-top:0;
+}
+
 .breadcrumb{
   background-color:#fff;
 }
@@ -210,4 +218,8 @@ h1{
 
 a, a:hover, a:active {
   text-decoration: none;
+}
+
+.badge-alert{
+  background-color:#d9534f;
 }

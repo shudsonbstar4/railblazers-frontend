@@ -1,0 +1,46 @@
+<html ng-app="myApp" ng-controller="MainController">
+<head>
+
+<link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+<!-- BEGIN Change Password MODAL FORM-->
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></button>
+	<h4 class="modal-title">Cancel Event</h4>
+</div>
+<div class="modal-body">
+
+    <div class="msg-block alert alert-success" ng-show="successMessage === true">
+        <p>
+            Event has been successfully cancelled and cancellation email has been sent to the attendees.
+        </p>
+    </div>
+     <div class="row">
+        <div class="col-md-12">
+            <p>Are you sure you want to cancel this event? By clicking Confirm Cancel Event, you are cancelling the event and sending attendees an email about the cancellation. Please confirm this is what you want to do.</p>
+        </div>
+     </div>
+
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-danger red" ng-click="confirmCancel(selectedEvent)"><i class="glyphicon glyphicon-trash"></i> Confirm Cancel Event</button>
+	<button type="button" class="btn default" ng-click="cancel()"><i class="glyphicon glyphicon-remove"></i> Cancel Changes</button>
+</div>
+<!-- END Change Password MODAL FORM-->
+
+<script data-require="jquery@*" data-semver="2.1.1" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+    <!--<script data-require="angular.js@*" data-semver="1.3.7" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js"></script>-->
+    <script src="../HTML/assets/js/angular.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="0.12.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    
+    <script src="../HTML/assets/js/app.js"></script>
+
+
+</body>
+</html>
