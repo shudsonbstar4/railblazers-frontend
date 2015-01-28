@@ -1,0 +1,82 @@
+<!-- BEGIN Change Password MODAL FORM-->
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()"></button>
+	<h4 class="modal-title">Create Event</h4>
+</div>
+<div class="modal-body">
+
+    <div class="msg-block alert alert-success" ng-show="successMessage === true">
+        <p>
+            {{successMessage}}
+        </p>
+    </div>
+     <div class="row">
+        <form name="createEvent">
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Title:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <input type="text" class="form-control" ng-model="selectedEvent.name">
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="control-label col-md-2 col-sm-2 col-xs-2 col-label-3">Group:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <select class="form-control" ng-model="selectedEvent.group" ng-options="group.name for group in groups"></select>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Event Picture:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <input type="file" class="form-control" ng-model="selectedEvent.image">
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Event Description:</label>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <textarea class="form-control" ng-model="selectedEvent.description" rows="8"></textarea>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Date:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <p class="input-group">
+                      <input type="text" class="form-control" datepicker-popup="shortDate" ng-model="startDate" is-open="datepickers.start"  datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                      <span class="input-group-btn">
+                        <button type="button" class="btn" ng-click="openDT($event, 'start')"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Start Time:</label>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <p class="input-group">
+                     <!--TIMEPICKER-->
+                      <timepicker ng-model="mystarttime" hour-step="1" minute-step="5" show-meridian="true" mousewheel="false"></timepicker>
+                    <!--END TIMEPICKER-->
+                    </p>
+                </div>
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">End Time:</label>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <p class="input-group">
+                     <!--TIMEPICKER-->
+                      <timepicker ng-model="mystarttime" hour-step="1" minute-step="5" show-meridian="true" mousewheel="false"></timepicker>
+                    <!--END TIMEPICKER-->
+                    </p>
+                </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <label class="col-md-2 col-sm-2 col-xs-2 control-label-3">Location:</label>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <input type="text" class="form-control" ng-model="selectedEvent.location">
+                </div>
+            </div>
+        </form>
+     </div>
+
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-success green" ng-click="confirmCancel(selectedEvent)"><i class="glyphicon glyphicon-floppy-disk"></i> Create Event</button>
+	<button type="button" class="btn default" ng-click="cancel()"><i class="glyphicon glyphicon-remove"></i> Cancel</button>
+</div>
+<!-- END Change Password MODAL FORM-->

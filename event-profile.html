@@ -5,10 +5,10 @@
     <link data-require="bootstrap@*" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href="assets/css/style.css" rel="stylesheet">
-    <title>Railblazers - Events</title>
+    <title>Railblazers - Events - Event Profile</title>
   </head>
 
-  <body ng-app="myApp" ng-controller="EventsController">
+  <body ng-app="myApp" ng-controller="EventProfileController">
     <div class="row" ng-view>
       <nav class="navbar navbar-inverse">
         <div class="container">
@@ -44,57 +44,52 @@
         <div class="col-md-12 content-background">
           <div class="container">
             <div class="row">
-              <div class="col-md-6">
-                <h1>Events</h1>
+              <div class="col-md-12">
+                <h1>Event 1</h1>
                 <ul class="breadcrumb">
                   <li><a href="../HTML/events.html">Events</a></li>
+                  <li><a href="../HTML/event-profile.html">Event 1</a></li>
                 </ul>
               </div>
-              <div class="col-md-6 text-right">
-                <div class="clear-space"></div>
-                <button class="btn btn-success green" ng-controller="CreateEventModalController" ng-click="openCreateEvent()">
-                  Create New Event <i class="glyphicon glyphicon-plus"></i> 
-                </button>
-              </div>
-            </div>
             
-            <!-- First form -->
-            <div ng-repeat="event in events">
-              <div class="row">
-                <div class="col-md-2">
-                  <img src="http://placehold.it/150x150" alt="placeholder" />
-                  <h4 class="text-center">
-                    <a href ng-controller="EditEventModalController" ng-click="openEditEvent(event)"><i class="glyphicon glyphicon-pencil"></i></a>
-                    <a href ng-controller="CancelEventModalController" ng-click="openCancelEventModal(event)"><i class="glyphicon glyphicon-trash"></i></a>
-                  </h4>
-                </div>
-                <div class="col-md-10">
-                  <h2 class="custom-heading"><a href="../HTML/event-profile.html">{{event.name}}</a></h2>
-                  <h4 class="custom-heading">{{event.group}}</h4>
-                  <p>{{event.desc}}</p>
-                  <p>
-                    <em>
-                      {{event.date}}<br />
-                      {{event.time}}<br />
-                      {{event.location}}<br />
-                      <a popover-placement="right" popover="Sample text<br />Sample text" popover-title="Members Going" href>{{event.rsvps}} Members Going</a>
-                    </em>
-                  </p>
-                </div>
-              </div>
-              <hr />
-              <div class="clear-space"></div>
-            </div>
 
-            <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-6">
-                <button class="btn btn-success green btn-block text-center" ng-controller="CreateEventModalController" ng-click="openCreateEvent()">
-                  <i class="glyphicon glyphicon-plus"></i> Create a New Event
-                </button>
-              </div>
-              <div class="col-md-3"></div>
-            </div>
+            <tabset>
+              <tab>
+                <tab-heading>
+                  Overview
+                </tab-heading>
+                <!-- First form -->
+                <div class="clear-space"></div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <img src="http://placehold.it/150x150" alt="placeholder" />
+                    <h4 class="text-center">
+                      <a href ng-controller="EditEventModalController" ng-click="openEditEvent(event)"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href ng-controller="CancelEventModalController" ng-click="openCancelEventModal(event)"><i class="glyphicon glyphicon-trash"></i></a>
+                    </h4>
+                  </div>
+                  <div class="col-md-10">
+                    <h2 class="custom-heading">{{selectedEvent.name}}</h2>
+                    <h4 class="custom-heading">{{selectedEvent.group}}</h4>
+                    <p>{{selectedEvent.desc}}</p>
+                    <p>
+                      <em>
+                        {{selectedEvent.date}}<br />
+                        {{selectedEvent.time}}<br />
+                        {{selectedEvent.location}}<br />
+                        <a popover-placement="right" popover="Sample text<br />Sample text" popover-title="Members Going" href>{{selectedEvent.rsvps}} Members Going</a>
+                      </em>
+                    </p>
+                  </div>
+                </div>
+              </tab>
+              <tab>
+                <tab-heading>
+                  Chat <span class="badge badge-alert">4</span>
+                </tab-heading>
+              </tab>
+            </tabset>
+                      
             <div class="clear-space"></div>
 
           </div><!--container-->

@@ -219,3 +219,7 @@ hr{
 a, a:hover, a:active {
   text-decoration: none;
 }
+
+.badge-alert{
+  background-color:#d9534f;
+}
